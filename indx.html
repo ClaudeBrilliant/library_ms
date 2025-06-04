@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Library Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1> Simple Library System</h1>
+        
+        <!-- Books Section -->
+        <div class="section">
+            <h2>Books Management</h2>
+            <div class="form-group">
+                <input type="text" id="bookTitle" placeholder="Book Title">
+                <input type="text" id="bookAuthor" placeholder="Author">
+                <button onclick="addBook()">Add Book</button>
+            </div>
+            <div id="booksList"></div>
+        </div>
+
+        <!-- Members Section -->
+        <div class="section">
+            <h2>Members Management</h2>
+            <div class="form-group">
+                <input type="text" id="memberName" placeholder="Member Name">
+                <input type="email" id="memberEmail" placeholder="Email">
+                <button onclick="addMember()">Add Member</button>
+            </div>
+            <div id="membersList"></div>
+        </div>
+
+        <!-- Borrowing Section -->
+        <div class="section">
+            <h2>Borrow/Return Books</h2>
+            <div class="form-group">
+                <select id="memberSelect">
+                    <option value="">Select Member</option>
+                </select>
+                <select id="bookSelect">
+                    <option value="">Select Available Book</option>
+                </select>
+                <button onclick="borrowBook()">Borrow Book</button>
+            </div>
+            <h3>Currently Borrowed Books</h3>
+            <div id="borrowedBooksList"></div>
+        </div>
+    </div>
+
+    <script src="./build/index.js"></script>
+</body>
+</html>
