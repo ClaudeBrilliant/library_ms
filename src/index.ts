@@ -1,5 +1,3 @@
-// script.ts
-// This TypeScript file needs to be compiled to JavaScript to run in the browser
 
 // Define types for our data structures
 interface Book {
@@ -7,14 +5,14 @@ interface Book {
     title: string;
     author: string;
     isAvailable: boolean;
-    borrowedBy?: number; // ID of the member who borrowed it
+    borrowedBy?: number; 
 }
 
 interface Member {
     id: number;
     name: string;
     email: string;
-    borrowedBooks: number[]; // Array of book IDs
+    borrowedBooks: number[];
 }
 
 interface BorrowRecord {
@@ -37,23 +35,23 @@ function initializeSystem(): void {
     // Add sample books
     books.push({
         id: nextBookId++,
-        title: "The Great Gatsby",
-        author: "F. Scott Fitzgerald",
+        title: "Think and Grow Rich",
+        author: "Napoleon hill",
         isAvailable: true
     });
     
     books.push({
         id: nextBookId++,
-        title: "To Kill a Mockingbird",
-        author: "Harper Lee",
+        title: "Rich Dad Poor Dad",
+        author: "Robert ",
         isAvailable: true
     });
     
     // Add sample member
     members.push({
         id: nextMemberId++,
-        name: "John Doe",
-        email: "john@example.com",
+        name: "Claude Brilliant",
+        email: "clydebrilliant@gmail",
         borrowedBooks: []
     });
     
